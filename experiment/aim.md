@@ -1,3 +1,6 @@
-### Aim of the experiment
+### Aim of the Experiment
 
-The goal of this experiment is to introduce students to the important attributes in the MFT, recovering deleted resident file’s content, add an ADS with a value and retrieve them
+
+
+
+<p>The aim of this experiment is to explore key attributes within the Master File Table (MFT), recover the content of deleted resident files, and demonstrate how to add and retrieve data from an Alternate Data Stream (ADS). </p>
