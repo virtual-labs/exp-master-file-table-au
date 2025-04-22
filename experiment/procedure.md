@@ -1,8 +1,8 @@
-# Procedure
+<h3> Procedure</h3>
 
 The Master File Table (MFT) is a crucial component of the NTFS (New Technology File System) used by Windows. It serves as a database that stores detailed metadata about every file and directory on an NTFS volume, including file names, sizes, permissions, and timestamps. Each file or directory is assigned a unique entry in the MFT, which contains both system and user data. The MFT allows the NTFS file system to quickly locate and manage files. It is essential for file operations, including creating, reading, and writing files.
 
-## Steps
+<h4> Steps</h4>
 
 1. **To initiate the simulation, click the Outlook button to open the Outlook interface on the computer.**
 
@@ -38,7 +38,7 @@ The Master File Table (MFT) is a crucial component of the NTFS (New Technology F
 
 9. **After clicking the execute button, will wait 24 hours and click execute button to extract the mft ,offset from the content.**
 
-   ![img](./images/image9.png)
+   ![img](./images/image10.png)
 
 10. **After clicking the execute button, Extracts the shellcode.**
 
@@ -53,12 +53,11 @@ The Master File Table (MFT) is a crucial component of the NTFS (New Technology F
 ![img](./images/image13.png)
 ![img](./images/image14.png)
 
-## Steps
+<h4> Steps</h4>
 
 **Master File Table**
 
-1. **
-   Clicking the "Show MFT View" button will display the MFT Table view on the left side, with corresponding instructions on the right side. The instruction panel will include a "Go to Simulation" button, which will navigate to the real-time simulation currently being conducted with Outlook.**
+1. **Clicking the "Show MFT View" button will display the MFT Table view on the left side, with corresponding instructions on the right side. The instruction panel will include a "Go to Simulation" button, which will navigate to the real-time simulation currently being conducted with Outlook.**
 
    ![img](./images/image15.png)`
 
@@ -66,12 +65,10 @@ The Master File Table (MFT) is a crucial component of the NTFS (New Technology F
 
    ![img](./images/image16.png)
 
-3. **
-   Whenever a file is created in the simulation, it will be reflected in both the MFT browser and the file explorer. You can view these changes by clicking the "Show MFT View" button in the simulation.**
+3.**Whenever a file is created in the simulation, it will be reflected in both the MFT browser and the file explorer. You can view these changes by clicking the "Show MFT View" button in the simulation.**
 
    ![img](./images/image10.png)
 
-4. **
-   In the offset panel, you can search for the content "hjfkhdfbdbfkdfkd" using the search input, and then click the search button to locate the offset and highlight the hexadecimal value in red.**
+4. **In the offset panel, you can search for the content "hjfkhdfbdbfkdfkd" using the search input, and then click the search button to locate the offset and highlight the hexadecimal value in red.**
 
    ![img](./images/image17.png)
