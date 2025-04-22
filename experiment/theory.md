@@ -1,4 +1,4 @@
-## Theory
+<h3>Theory</h3>
 
 
 <p>
