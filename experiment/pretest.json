@@ -51,6 +51,57 @@
       },
       "correctAnswer": "b",
       "difficulty": "beginner"
+    },
+    {
+      "question": "What is the size of a standard MFT record in the NTFS file system?",
+      "answers": {
+        "a": "512 bytes",
+        "b": "2048 bytes",
+        "c": "1024 bytes",
+        "d": "4096 bytes"
+      },
+      "explanations": {
+        "a": "512 bytes is not the standard size of an MFT record.",
+        "b": "2048 bytes is larger than the typical size of an MFT record.",
+        "c": "Correct. The standard size of an MFT record is 1024 bytes (1 KB).",
+        "d": "4096 bytes refers to common cluster size, not MFT record size."
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "What section of an MFT record may contain unused space called 'record slack'?",
+      "answers": {
+        "a": "Header",
+        "b": "Attributes",
+        "c": "Record Slack",
+        "d": "None of the above"
+      },
+      "explanations": {
+        "a": "The header stores structural metadata, not slack space.",
+        "b": "Attributes store detailed metadata and data, not slack.",
+        "c": "Correct. Record slack is the unused portion of the 1 KB MFT record after storing the header and attributes.",
+        "d": "Record slack is a defined section in an MFT record."
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "What differentiates a resident file from a non-resident file in NTFS?",
+      "answers": {
+        "a": "Resident files are stored externally, non-resident files are stored in MFT.",
+        "b": "Resident files are system files, non-resident are user files.",
+        "c": "Resident files fit within the MFT record, while non-resident files are stored outside the MFT.",
+        "d": "Resident files are encrypted by default, non-resident are not."
+      },
+      "explanations": {
+        "a": "This is the opposite. Resident files are stored inside the MFT.",
+        "b": "File type (system/user) does not determine residency.",
+        "c": "Correct. Resident files fit within the MFT record, while larger, non-resident files are stored outside with pointers in the MFT.",
+        "d": "Residency has nothing to do with encryption."
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
     }
   ]
 }
