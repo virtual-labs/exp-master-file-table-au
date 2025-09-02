@@ -12,3 +12,4 @@
 - [Alternate Data Stream Attack Framework to Perform Stealth Attacks on Active Directory Hosts – MDPI (ResearchGate)](https://www.researchgate.net/publication/364034076_Alternate_Data_Stream_Attack_Framework_to_Perform_Stealth_Attacks_on_Active_Directory_Hosts)  
   
 
+
