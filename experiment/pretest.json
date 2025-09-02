@@ -1,159 +1,56 @@
 {
   "version": 2.0,
-  "pretest_questions": [
+  "questions": [
     {
-      "question": "What is the primary goal of file carving in digital forensics?",
+      "question": "What is the primary role of the Master File Table (MFT) in the NTFS file system?",
       "answers": {
-        "a": "To encrypt sensitive information",
-        "b": "To extract deleted or fragmented files from unallocated space",
-        "c": "To format storage media securely",
-        "d": "To create disk partitions"
+        "a": "To manage network connections",
+        "b": "To store and track every file and directory on an NTFS volume",
+        "c": "To encrypt files",
+        "d": "To manage system memory"
       },
       "explanations": {
-        "a": "Encryption is not related to file carving.",
-        "b": "Correct. File carving aims to recover deleted or fragmented files from raw disk images without using file system metadata.",
-        "c": "Formatting is unrelated to recovery.",
-        "d": "Partitioning is not part of file carving."
+        "a": "The MFT is not involved in managing network connections.",
+        "b": "Correct. The MFT contains an entry for every file or directory on an NTFS volume, acting as a directory catalog. ",
+        "c": "File encryption is not the primary role of the MFT.",
+        "d": "System memory management is not handled by the MFT."
       },
       "correctAnswer": "b",
       "difficulty": "beginner"
     },
     {
-      "question": "Which of the following techniques is commonly used during file carving?",
+      "question": "Which type of data is typically stored in an Alternate Data Stream (ADS) in an NTFS file system?",
       "answers": {
-        "a": "Header-footer analysis",
-        "b": "Password hashing",
-        "c": "Disk compression",
-        "d": "Network sniffing"
+        "a": "File metadata",
+        "b": "Large media files",
+        "c": "Hidden or additional data associated with a file",
+        "d": "Operating system files"
       },
       "explanations": {
-        "a": "Correct. File carving often relies on header-footer signatures to locate and extract files.",
-        "b": "Password hashing is unrelated.",
-        "c": "Compression is irrelevant here.",
-        "d": "Network sniffing deals with traffic capture, not file carving."
-      },
-      "correctAnswer": "a",
-      "difficulty": "beginner"
-    },
-    {
-      "question": "Why is understanding file signatures important in digital forensics?",
-      "answers": {
-        "a": "They help compress files efficiently",
-        "b": "They are used to locate specific file types in raw data",
-        "c": "They improve disk encryption",
-        "d": "They optimize storage capacity"
-      },
-      "explanations": {
-        "a": "File signatures are unrelated to compression.",
-        "b": "Correct. File signatures allow forensic tools to identify and recover specific file types during analysis.",
-        "c": "Encryption is unrelated to signatures.",
-        "d": "Storage optimization is not the purpose."
-      },
-      "correctAnswer": "b",
-      "difficulty": "beginner"
-    }
-  ],
-  "posttest_questions": [
-    {
-      "question": "After deleting a file in an NTFS file system, how can you still recover its content?",
-      "answers": {
-        "a": "By using the file's last access date",
-        "b": "By restoring the file from the Recycle Bin",
-        "c": "By locating the $DATA attribute in the Master File Table (MFT)",
-        "d": "By running a disk defragmentation"
-      },
-      "explanations": {
-        "a": "The last access date does not contain the file content.",
-        "b": "Once permanently deleted, the file is not in the Recycle Bin.",
-        "c": "Correct. The $DATA attribute in the MFT still holds the file content even after deletion.",
-        "d": "Disk defragmentation is unrelated to file recovery."
+        "a": "Metadata is usually stored in specific attributes, not in ADS.",
+        "b": "Large media files are stored as regular files, not in ADS.",
+        "c": "Correct. ADS can store hidden or additional data linked to a file, often used to hide malicious content. ",
+        "d": "Operating system files are typically stored as standard files."
       },
       "correctAnswer": "c",
-      "difficulty": "intermediate"
+      "difficulty": "beginner"
     },
     {
-      "question": "What is a key forensic use of the Alternate Data Streams (ADS) in an NTFS file system?",
+      "question": "What does the $DATA attribute in an MFT entry represent?",
       "answers": {
-        "a": "To increase the speed of file access",
-        "b": "To hide additional data or malicious content within a file",
-        "c": "To compress files automatically",
-        "d": "To store file permissions"
+        "a": "The security settings of the file",
+        "b": "The actual content of the file",
+        "c": "The file's creation date",
+        "d": "The file's access permissions"
       },
       "explanations": {
-        "a": "ADS is not used to speed up file access.",
-        "b": "Correct. ADS can be used to hide additional data, including malicious content, within a file, making it a significant area of interest in forensic analysis.",
-        "c": "ADS does not handle file compression.",
-        "d": "File permissions are not stored in ADS."
+        "a": "Security settings are not stored in the $DATA attribute.",
+        "b": "Correct. The $DATA attribute contains the actual content of the file, whether resident or non-resident. ",
+        "c": "Creation date is stored in a different attribute, not $DATA.",
+        "d": "Access permissions are also stored in a different attribute."
       },
       "correctAnswer": "b",
-      "difficulty": "intermediate"
-    },
-    {
-      "question": "What is the importance of extracting the Master File Table (MFT) from a file system image during forensic analysis?",
-      "answers": {
-        "a": "To identify suspicious files and track file activity",
-        "b": "To format the drive for future use",
-        "c": "To increase the size of the file system",
-        "d": "To reduce the number of files on the system"
-      },
-      "explanations": {
-        "a": "Correct. The MFT helps forensic analysts identify suspicious files, track file activity, and recover deleted files by examining various attributes.",
-        "c": "The MFT does not increase the size of the file system.",
-        "d": "The MFT does not reduce the number of files."
-      },
-      "correctAnswer": "a",
-      "difficulty": "intermediate"
-    },
-    {
-      "question": "Which algorithm is often used to verify file integrity during digital forensic investigations?",
-      "answers": {
-        "a": "SHA-256",
-        "b": "AES",
-        "c": "RSA",
-        "d": "Diffie-Hellman"
-      },
-      "explanations": {
-        "a": "Correct. SHA-256 is commonly used to generate hash values and verify that files remain unaltered during analysis.",
-        "b": "AES is an encryption algorithm, not for verification.",
-        "c": "RSA is used for encryption, not file integrity.",
-        "d": "Diffie-Hellman is for key exchange."
-      },
-      "correctAnswer": "a",
-      "difficulty": "advanced"
-    },
-    {
-      "question": "Why are memory dumps analyzed during forensic investigations?",
-      "answers": {
-        "a": "To recover volatile data such as passwords and cached files",
-        "b": "To speed up operating system boot time",
-        "c": "To improve file compression techniques",
-        "d": "To detect unused disk partitions"
-      },
-      "explanations": {
-        "a": "Correct. Memory dumps can reveal sensitive information like passwords, session tokens, and cached files that are lost once the system is powered off.",
-        "b": "Memory dumps do not affect boot speed.",
-        "c": "Compression is unrelated to memory dumps.",
-        "d": "Disk partitions are not analyzed through memory dumps."
-      },
-      "correctAnswer": "a",
-      "difficulty": "advanced"
-    },
-    {
-      "question": "What role does signature-based carving play in digital forensics?",
-      "answers": {
-        "a": "It encrypts files for security",
-        "b": "It scans raw disk data to identify files based on known headers and footers",
-        "c": "It compresses disk images",
-        "d": "It removes duplicate files automatically"
-      },
-      "explanations": {
-        "a": "Encryption is unrelated to carving.",
-        "b": "Correct. Signature-based carving searches for known patterns to reconstruct deleted or fragmented files.",
-        "c": "Compression is not involved.",
-        "d": "Duplicate removal is separate from carving."
-      },
-      "correctAnswer": "b",
-      "difficulty": "advanced"
+      "difficulty": "beginner"
     }
   ]
-}
+} 
