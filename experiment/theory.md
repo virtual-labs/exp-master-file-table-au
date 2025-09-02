@@ -1,6 +1,4 @@
 <h3>Theory</h3>
-
-
 <p>
 The Master File Table (MFT) is analogous to a library directory catalog. It contains an entry for every file or directory inside an NTFS volume, including the MFT itself. Every update that occurs on a file within the file system is reflected in the MFT. 
 If an adversary overwrites the contents of a target file on the hard disk, an examiner can still prove the existence of the file by referring to the MFT. With the help of MFT attributes, we can also detect suspicious files using timestamp anomalies. 
