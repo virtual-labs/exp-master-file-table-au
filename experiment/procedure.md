@@ -1,4 +1,4 @@
-<h3> Procedure</h3>
+
 
 The Master File Table (MFT) is a crucial component of the NTFS (New Technology File System) used by Windows. It serves as a database that stores detailed metadata about every file and directory on an NTFS volume, including file names, sizes, permissions, and timestamps. Each file or directory is assigned a unique entry in the MFT, which contains both system and user data. The MFT allows the NTFS file system to quickly locate and manage files. It is essential for file operations, including creating, reading, and writing files.
 
