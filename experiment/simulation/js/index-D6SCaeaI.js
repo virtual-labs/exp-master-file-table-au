@@ -60713,7 +60713,7 @@ Arguments: ` +
         from: "application.outlook.com",
         to: "vlabs.outlook.com",
         title: "SPA Grant Application Status",
-        subject: "Dear vLabs,your application ...",
+        subject: "Dear vLabs,your application...",
         content: `Application Submission Confirmation
 
     Your application is complete, and will be automatically submitted once all supporting documents are received.
@@ -60732,7 +60732,7 @@ Arguments: ` +
         from: "application.outlook.com",
         to: "vlabs.outlook.com",
         title: "SPA Grant Application Status",
-        subject: "Dear vLabs,your application ...",
+        subject: "Dear vLabs,your application....",
         content: `Application Submission Confirmation
 
     Your application is complete, and will be automatically submitted once all supporting documents are received.
@@ -64212,13 +64212,14 @@ Units are in 512-byte sectors
                       style: {
                         width: "95%",
                         height: "95%",
-                        background: "red",
                         position: "relative",
                         display: "flex",
                         flexDirection: "column",
                         flex: 1,
                         marginInline: 10,
                         zIndex: 100,
+                        borderTop: "10px solid black",
+                        boxSizing: "border-box",
                       },
                       children: [
                         _.jsx("img", {
@@ -64366,7 +64367,24 @@ Units are in 512-byte sectors
         style: { display: "flex", flex: 1 },
         children: _.jsx("div", {
           style: { flex: 1, background: "#00122e" },
-          children: t ? _.jsx(Ooe, { isMobile: e }) : _.jsx(Tne, {}),
+          children: t
+            ? _.jsx("div", {
+                style: {
+                  width: "100%",
+                  height: "100%",
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                },
+                children: _.jsx("div", {
+                  style: {
+                    width: e ? "100%" : "80%",
+                    height: e ? "100%" : "80%",
+                  },
+                  children: _.jsx(Ooe, { isMobile: e }),
+                }),
+              })
+            : _.jsx(Tne, {}),
         }),
       });
     },
