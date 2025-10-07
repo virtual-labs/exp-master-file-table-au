@@ -1,17 +1,4 @@
-## Introduction
 
-| <b>Discipline  | <b>Computer Science and Engineering      |
-| :------------- | :--------------------------------------- |
-| <b> Lab        | <b> Computer Forensics           |
-| <b> Experiment | <b> File Signature Analysis and File Carving Techniques |
-
-### About the Experiment
-
-| <b>Name of Developer | <b> Dr. Krishnashree Achuthan                  |
-| :------------------- | :--------------------------------------------- |
-| <b> Institute        | <b> Amrita Vishwa Vidyapeetham                 |
-| <b> Email id         | <b> krishna@amrita.edu                         |
-| <b> Department       | Center for Cyber Security Systems and Networks |
 
 ### Contributors List
 
