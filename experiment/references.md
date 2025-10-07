@@ -1,4 +1,4 @@
-### References
+
 
 - [Alternate Data Streams: Out of the Shadows and into the Light (GIAC/SANS Paper)](https://www.giac.org/paper/gcwn/230/alternate-data-streams-shadows-light/104234)  
 
