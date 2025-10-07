@@ -2,37 +2,105 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "This is a Sample Question 1?",
+      "question": "What is the primary role of the Master File Table (MFT) in the NTFS file system?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "To manage network connections",
+        "b": "To store and track every file and directory on an NTFS volume",
+        "c": "To encrypt files",
+        "d": "To manage system memory"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "a": "The MFT is not involved in managing network connections.",
+        "b": "Correct. The MFT contains an entry for every file or directory on an NTFS volume, acting as a directory catalog.",
+        "c": "File encryption is not the primary role of the MFT.",
+        "d": "System memory management is not handled by the MFT."
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Which type of data is typically stored in an Alternate Data Stream (ADS) in an NTFS file system?",
+      "answers": {
+        "a": "File metadata",
+        "b": "Large media files",
+        "c": "Hidden or additional data associated with a file",
+        "d": "Operating system files"
+      },
+      "explanations": {
+        "a": "Metadata is usually stored in specific attributes, not in ADS.",
+        "b": "Large media files are stored as regular files, not in ADS.",
+        "c": "Correct. ADS can store hidden or additional data linked to a file, often used to hide malicious content.",
+        "d": "Operating system files are typically stored as standard files."
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "What does the $DATA attribute in an MFT entry represent?",
+      "answers": {
+        "a": "The security settings of the file",
+        "b": "The actual content of the file",
+        "c": "The file's creation date",
+        "d": "The file's access permissions"
+      },
+      "explanations": {
+        "a": "Security settings are not stored in the $DATA attribute.",
+        "b": "Correct. The $DATA attribute contains the actual content of the file, whether resident or non-resident.",
+        "c": "Creation date is stored in a different attribute, not $DATA.",
+        "d": "Access permissions are also stored in a different attribute."
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "What is a Resident File in NTFS?",
+      "answers": {
+        "a": "A file whose content is stored directly within the MFT record",
+        "b": "A file stored on an external drive",
+        "c": "A file larger than 1 KB",
+        "d": "A system file protected by NTFS"
+      },
+      "explanations": {
+        "a": "Correct. Resident files are small enough to fit entirely within the MFT record.",
+        "b": "Files on external drives are unrelated to the resident concept.",
+        "c": "Files larger than 1 KB are non-resident files.",
+        "d": "Being a system file does not determine residency in MFT."
       },
       "correctAnswer": "a",
       "difficulty": "beginner"
     },
     {
-      "question": "This is a Sample Question 2?",
+      "question": "What happens when a file is non-resident in NTFS?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "Its content is stored directly inside the MFT record",
+        "b": "The file is deleted automatically",
+        "c": "The $DATA attribute stores pointers to its external disk location",
+        "d": "It cannot have Alternate Data Streams"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "a": "This is true for resident files, not non-resident files.",
+        "b": "Files are not automatically deleted if non-resident.",
+        "c": "Correct. Non-resident files have their content stored outside the MFT, and the $DATA attribute points to it.",
+        "d": "Non-resident files can still have ADS."
       },
       "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Why are MFT attributes important for forensic analysis?",
+      "answers": {
+        "a": "They help identify timestamp anomalies and recover deleted files",
+        "b": "They encrypt the file system",
+        "c": "They speed up file copying",
+        "d": "They manage user permissions exclusively"
+      },
+      "explanations": {
+        "a": "Correct. MFT attributes provide metadata for timeline analysis and file recovery.",
+        "b": "Encryption is not the role of MFT attributes.",
+        "c": "File copying speed is unrelated to MFT attributes.",
+        "d": "User permissions are stored but not their exclusive purpose."
+      },
+      "correctAnswer": "a",
       "difficulty": "beginner"
     }
   ]
