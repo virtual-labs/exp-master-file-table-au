@@ -59183,7 +59183,7 @@ Arguments: ` +
               style: { height: `${d.length * Ji}px`, position: "relative" },
               children: d.slice(f, h).map((m, y) => {
                 const v = f + y,
-                  b = (v * 16).toString().padStart(8, "0"),
+                  b = (v * 16 + 16).toString().padStart(8, "0"),
                   g = e && d[v].ascii.toLowerCase().includes(e.toLowerCase());
                 return _.jsx(
                   "div",
@@ -60713,7 +60713,7 @@ Arguments: ` +
         from: "application.outlook.com",
         to: "vlabs.outlook.com",
         title: "SPA Grant Application Status",
-        subject: "Dear vLabs,your application ...",
+        subject: "Dear vLabs,your application...",
         content: `Application Submission Confirmation
 
     Your application is complete, and will be automatically submitted once all supporting documents are received.
@@ -60732,7 +60732,7 @@ Arguments: ` +
         from: "application.outlook.com",
         to: "vlabs.outlook.com",
         title: "SPA Grant Application Status",
-        subject: "Dear vLabs,your application ...",
+        subject: "Dear vLabs,your application....",
         content: `Application Submission Confirmation
 
     Your application is complete, and will be automatically submitted once all supporting documents are received.
@@ -63779,7 +63779,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         a = [
           {
             execute: 0,
-            command: "type nul > desktop.ini",
+            command: "echo desktop.ini > nul",
             output: 'Creates the "desktop.ini" file',
             step: 'The "desktop.ini" has been created successfully.',
             nextExecute: 1,
@@ -64197,7 +64197,7 @@ Units are in 512-byte sectors
                   alignItems: "center",
                   flex: 1,
                 },
-                children: _.jsxs("div", {
+                children: _.jsx("div", {
                   style: {
                     width: "80%",
                     height: "80%",
@@ -64207,151 +64207,140 @@ Units are in 512-byte sectors
                     alignItems: "center",
                     justifyContent: "center",
                   },
-                  children: [
-                    _.jsxs("div", {
-                      style: {
-                        width: "95%",
-                        height: "95%",
-                        background: "red",
-                        position: "relative",
-                        display: "flex",
-                        flexDirection: "column",
-                        flex: 1,
-                        marginInline: 10,
-                        zIndex: 100,
-                      },
-                      children: [
-                        _.jsx("img", {
-                          style: { width: "100%", height: "100%", zIndex: 5 },
-                          src: ooe,
-                          alt: "Display",
-                        }),
-                        _.jsx("div", {
+                  children: _.jsxs("div", {
+                    style: {
+                      width: "95%",
+                      height: "95%",
+                      position: "relative",
+                      display: "flex",
+                      flexDirection: "column",
+                      flex: 1,
+                      marginInline: 10,
+                      zIndex: 100,
+                      borderTop: "10px solid black",
+                      boxSizing: "border-box",
+                    },
+                    children: [
+                      _.jsx("img", {
+                        style: { width: "100%", height: "100%", zIndex: 5 },
+                        src: ooe,
+                        alt: "Display",
+                      }),
+                      _.jsx("div", {
+                        style: {
+                          flex: 0.9,
+                          background: "transparent",
+                          position: "absolute",
+                          zIndex: 5e3,
+                          width: "100%",
+                          height: "93%",
+                          display: "flex",
+                          flexDirection: "row",
+                          justifyContent: "flex-start",
+                        },
+                        children: _.jsx("div", {
                           style: {
-                            flex: 0.9,
                             background: "transparent",
-                            position: "absolute",
-                            zIndex: 5e3,
-                            width: "100%",
-                            height: "93%",
                             display: "flex",
-                            flexDirection: "row",
-                            justifyContent: "flex-start",
-                          },
-                          children: _.jsx("div", {
-                            style: {
-                              background: "transparent",
-                              display: "flex",
-                              justifyContent: "space-around",
-                              flexDirection: "column",
-                              alignItems: "center",
-                              flex: 0.1,
-                            },
-                            children: _.jsxs("div", {
-                              style: {
-                                width: 80,
-                                height: "35%",
-                                background: "transparent",
-                                display: "flex",
-                                justifyContent: "center",
-                                flexDirection: "column",
-                                alignItems: "center",
-                                flex: 1,
-                                cursor: "pointer",
-                              },
-                              children: [
-                                _.jsx(Xl, {
-                                  size: "md",
-                                  icon: YE,
-                                  title: "Outlook",
-                                  onClick: f,
-                                }),
-                                o &&
-                                  _.jsx(Xl, {
-                                    size: "md",
-                                    icon: XE,
-                                    title:
-                                      (i == null ? void 0 : i.downloadData) ||
-                                      "Word",
-                                    onClick: h,
-                                  }),
-                                _.jsx(Xl, {
-                                  size: "md",
-                                  icon: Nb,
-                                  title: "Powershell",
-                                  onClick: m,
-                                }),
-                              ],
-                            }),
-                          }),
-                        }),
-                        _.jsx("div", {
-                          style: {
-                            flex: 0.1,
-                            background: "transparent",
-                            position: "absolute",
-                            zIndex: 5e3,
-                            bottom: 0,
-                            width: "100%",
-                            height: "7%",
-                            display: "flex",
+                            justifyContent: "space-around",
+                            flexDirection: "column",
                             alignItems: "center",
-                            justifyContent: "center",
+                            flex: 0.1,
                           },
                           children: _.jsxs("div", {
                             style: {
-                              width: "25%",
-                              height: "100%",
-                              display: "flex",
-                              alignItems: "center",
+                              width: 80,
+                              height: "35%",
                               background: "transparent",
-                              justifyContent: "flex-start",
+                              display: "flex",
+                              justifyContent: "center",
+                              flexDirection: "column",
+                              alignItems: "center",
+                              flex: 1,
+                              cursor: "pointer",
                             },
-                            className: "toolbox",
                             children: [
-                              n &&
+                              _.jsx(Xl, {
+                                size: "md",
+                                icon: YE,
+                                title: "Outlook",
+                                onClick: f,
+                              }),
+                              o &&
                                 _.jsx(Xl, {
-                                  onClick: f,
-                                  size: "s",
-                                  icon: YE,
-                                  title: "Outlook",
-                                  showShadow: !0,
-                                }),
-                              a &&
-                                _.jsx(Xl, {
-                                  onClick: h,
-                                  size: "s",
+                                  size: "md",
                                   icon: XE,
-                                  title: "Word",
-                                  showShadow: !0,
+                                  title:
+                                    (i == null ? void 0 : i.downloadData) ||
+                                    "Word",
+                                  onClick: h,
                                 }),
-                              c &&
-                                _.jsx(Xl, {
-                                  onClick: y,
-                                  size: "s",
-                                  icon: Nb,
-                                  title: "Powershell",
-                                  showShadow: !0,
-                                }),
+                              _.jsx(Xl, {
+                                size: "md",
+                                icon: Nb,
+                                title: "Powershell",
+                                onClick: m,
+                              }),
                             ],
                           }),
                         }),
-                        a && !l && _.jsx(hoe, {}),
-                        c && !s && _.jsx(Eoe, {}),
-                        n && !r && !e && _.jsx(QE, { isMobile: e }),
-                      ],
-                    }),
-                    _.jsx("div", {
-                      style: {
-                        width: 50,
-                        height: 70,
-                        background: "black",
-                        position: "absolute",
-                        bottom: -55,
-                        left: "49%",
-                      },
-                    }),
-                  ],
+                      }),
+                      _.jsx("div", {
+                        style: {
+                          flex: 0.1,
+                          background: "transparent",
+                          position: "absolute",
+                          zIndex: 5e3,
+                          bottom: 0,
+                          width: "100%",
+                          height: "7%",
+                          display: "flex",
+                          alignItems: "center",
+                          justifyContent: "center",
+                        },
+                        children: _.jsxs("div", {
+                          style: {
+                            width: "25%",
+                            height: "100%",
+                            display: "flex",
+                            alignItems: "center",
+                            background: "transparent",
+                            justifyContent: "flex-start",
+                          },
+                          className: "toolbox",
+                          children: [
+                            n &&
+                              _.jsx(Xl, {
+                                onClick: f,
+                                size: "s",
+                                icon: YE,
+                                title: "Outlook",
+                                showShadow: !0,
+                              }),
+                            a &&
+                              _.jsx(Xl, {
+                                onClick: h,
+                                size: "s",
+                                icon: XE,
+                                title: "Word",
+                                showShadow: !0,
+                              }),
+                            c &&
+                              _.jsx(Xl, {
+                                onClick: y,
+                                size: "s",
+                                icon: Nb,
+                                title: "Powershell",
+                                showShadow: !0,
+                              }),
+                          ],
+                        }),
+                      }),
+                      a && !l && _.jsx(hoe, {}),
+                      c && !s && _.jsx(Eoe, {}),
+                      n && !r && !e && _.jsx(QE, { isMobile: e }),
+                    ],
+                  }),
                 }),
               }),
               n && !r && e && _.jsx(QE, { isMobile: e }),
@@ -64366,7 +64355,24 @@ Units are in 512-byte sectors
         style: { display: "flex", flex: 1 },
         children: _.jsx("div", {
           style: { flex: 1, background: "#00122e" },
-          children: t ? _.jsx(Ooe, { isMobile: e }) : _.jsx(Tne, {}),
+          children: t
+            ? _.jsx("div", {
+                style: {
+                  width: "100%",
+                  height: "100%",
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                },
+                children: _.jsx("div", {
+                  style: {
+                    width: e ? "100%" : "70%",
+                    height: e ? "100%" : "70%",
+                  },
+                  children: _.jsx(Ooe, { isMobile: e }),
+                }),
+              })
+            : _.jsx(Tne, {}),
         }),
       });
     },
