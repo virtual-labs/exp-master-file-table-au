@@ -74622,9 +74622,9 @@ Units are in 512-byte sectors
             children: [
               "Click on ",
               _.jsx("strong", { children: "example.txt" }),
-              " to see how small files are stored in the MFT, or click on ",
+              " to see how resident files are stored in the MFT, or click on ",
               _.jsx("strong", { children: "large-video.mp4" }),
-              " to visualize how large files are stored in disk clusters.",
+              " to visualize how non-resident files are stored in disk clusters.",
             ],
           }),
           _.jsxs(f5, {
