@@ -1,0 +1,107 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "After deleting a file in an NTFS file system, how can you still recover its content?",
+      "answers": {
+        "a": "By using the file's last access date",
+        "b": "By restoring the file from the Recycle Bin",
+        "c": "By locating the $DATA attribute in the Master File Table (MFT)",
+        "d": "By running a disk defragmentation"
+      },
+      "explanations": {
+        "a": "The last access date does not contain the file content.",
+        "b": "Once permanently deleted, the file is not in the Recycle Bin.",
+        "c": "Correct. The $DATA attribute in the MFT still holds the file content even after deletion.",
+        "d": "Disk defragmentation is unrelated to file recovery."
+      },
+      "correctAnswer": "c",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "What is a key forensic use of the Alternate Data Streams (ADS) in an NTFS file system?",
+      "answers": {
+        "a": "To increase the speed of file access",
+        "b": "To hide additional data or malicious content within a file",
+        "c": "To compress files automatically",
+        "d": "To store file permissions"
+      },
+      "explanations": {
+        "a": "ADS is not used to speed up file access.",
+        "b": "Correct. ADS can be used to hide additional data, including malicious content, within a file, making it a significant area of interest in forensic analysis.",
+        "c": "ADS does not handle file compression.",
+        "d": "File permissions are not stored in ADS."
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "What is the importance of extracting the Master File Table (MFT) from a file system image during forensic analysis?",
+      "answers": {
+        "a": "To identify suspicious files and track file activity",
+        "b": "To format the drive for future use",
+        "c": "To increase the size of the file system",
+        "d": "To reduce the number of files on the system"
+      },
+      "explanations": {
+        "a": "Correct. The MFT helps forensic analysts identify suspicious files, track file activity, and recover deleted files by examining various attributes.",
+        "b": "Formatting the drive erases data and is not a forensic step.",
+        "c": "The MFT does not increase the size of the file system.",
+        "d": "The MFT does not reduce the number of files."
+      },
+      "correctAnswer": "a",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "Which NTFS attribute is crucial for determining when a file was created, modified, or accessed?",
+      "answers": {
+        "a": "$STANDARD_INFORMATION",
+        "b": "$BITMAP",
+        "c": "$INDEX_ALLOCATION",
+        "d": "$LOGFILE"
+      },
+      "explanations": {
+        "a": "Correct. The $STANDARD_INFORMATION attribute stores metadata such as file creation, modification, and access timestamps.",
+        "b": "$BITMAP tracks allocated and unallocated clusters, not timestamps.",
+        "c": "$INDEX_ALLOCATION manages directory structures, not timestamps.",
+        "d": "$LOGFILE records file system recovery data, not timestamps."
+      },
+      "correctAnswer": "a",
+      "difficulty": "advanced"
+    },
+    {
+      "question": "How does the $LogFile attribute assist digital forensic experts in NTFS investigations?",
+      "answers": {
+        "a": "It stores user credentials for accessing protected files",
+        "b": "It maintains transactional records of file system changes",
+        "c": "It keeps copies of deleted file contents",
+        "d": "It compresses the Master File Table for efficiency"
+      },
+      "explanations": {
+        "a": "$LogFile does not store user credentials.",
+        "b": "Correct. $LogFile contains transactional logs that help forensic experts reconstruct file system operations and identify suspicious activity.",
+        "c": "$LogFile does not keep entire deleted files, only metadata about changes.",
+        "d": "$LogFile does not handle compression."
+      },
+      "correctAnswer": "b",
+      "difficulty": "advanced"
+    },
+    {
+      "question": "Why is analyzing unallocated clusters important during NTFS forensic investigations?",
+      "answers": {
+        "a": "They often contain fragments of deleted files that can be recovered",
+        "b": "They are used to store NTFS boot records",
+        "c": "They automatically overwrite hidden ADS data",
+        "d": "They help speed up disk read operations"
+      },
+      "explanations": {
+        "a": "Correct. Unallocated clusters may still contain recoverable data from previously deleted files, which is crucial during forensic analysis.",
+        "b": "Boot records are stored separately, not in unallocated clusters.",
+        "c": "ADS data is not automatically removed when clusters are unallocated.",
+        "d": "Unallocated clusters have no role in improving disk performance."
+      },
+      "correctAnswer": "a",
+      "difficulty": "advanced"
+    }
+  ]
+}
